@@ -3,13 +3,13 @@
     box-sizing: border-box;
 }
 html, body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
     position: relative;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: monospace;
 }
 a {
     color: steelblue;
@@ -20,36 +20,51 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Fundo da página */
+/* Background */
 body {
     background-attachment: fixed;
     background-image: url("/img/fundo01.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+}
+.nevoa {
+    background: rgba(255,255,255,.5);
+    width: 100%;
+    height: 100%;
+}
+
+/* Container da página */
+.wrap {
+    background: rgba(255, 255, 255, .95);
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
 }
 
 /* Cabeçalho */
 .header {
-    background: rgb(0, 73, 0);
-    color: rgb(255, 255, 255);
+    background: rgba(255, 166, 0, 1);
     display: flex;
     align-items: center;
 }
-.header img {
+.header a {
     display: block;
+    font-size: 4rem;
+    background: #fff;
+    color: orangered;
     margin-right: 1rem;
-    width: 90px;
-    height: 90px;
 }
 .header h1 {
     margin: 0;
     text-align: center;
+    letter-spacing: .06rem;
+    color: white;
+    text-shadow: 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000;
 }
 .header small {
     display: block;
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: normal;
-    letter-spacing: .05rem;
+    letter-spacing: 0;
 }
 
 /* Menu principal */
@@ -57,51 +72,74 @@ body {
     background: #000;
     display: flex;
     justify-content: flex-end;
+    position: relative;
 }
-.nav a {
-    display: block;
+.nav a, .footer > a {
+    color: #fff;
     padding: 1rem;
-    color: white;
+    display: block;
 }
-.nav a:hover {
+.nav a:hover, .active, .footer > a:hover {
     background: orangered;
     text-decoration: none;
 }
 .nav a:first-child {
     margin-right: auto;
 }
-
-/* Rodapé */
-.footer {
-    background: rgb(0, 73, 0);
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.footer a {
-    padding: 1rem;
-    color: white;
-}
-.footer a:hover {
-    background: orangered;
-    text-decoration: none;
-}
-.footer div {
-    font-size: .8rem;
+#navlinks {
+    position: absolute;
+    background: #333;
+    top: 3.1rem;
+    left: 0;
+    min-width: 70%;
+    display: none;
+    box-shadow: 5px 5px 5px 0px rgba(136,136,136,0.7);
 }
 
-/* Conteudo central */
+/* Menu principal em larguras maiores */
+@media (min-width: 675px) {
+
+    #navbtn, #navlinks a:last-child span {
+        display: none;
+    }
+    #navlinks {
+        position: relative;
+        background: #000;
+        top: 0;
+        display: block;
+        box-shadow: none;
+        text-align: right;
+    }
+    #navlinks a {
+        display: inline-block;
+    }
+
+}
+
+/* Conteúdo central */
 .main {
     padding: 0 1.5rem;
 }
 
-/* quadro principal */
-.wrap {
-    background: rgba(255,255,255,.8);
-    width: 100%;
-    max-width: 1024px;
-    margin: auto;
+/* Rodapé */
+.footer {
+    background: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer > div {
+    font-size: .75rem;
+    color: #fff;
+    text-align: center;
+}
+.footer > div a {
+    color: #fff;
+}
+.footer small {
+    display: block;
+    margin-top: .5rem;
+    font-size: .65rem;
 }
 
 /* Classes úteis */
