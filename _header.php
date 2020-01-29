@@ -11,7 +11,14 @@ if ($titulo == "") {
 if ($css == "") {
     $css = null;
 } else {
-    $css = "<link rel=\"stylesheet\" href=\"{$css}\">";
+    $css = "<link rel=\"stylesheet\" href=\"{$css}\">\n";
+}
+
+// Tratando o JavaScript adicional
+if ($js == "") {
+    $js = null;
+} else {
+    $js = "<script src=\"{$js}\"></script>";
 }
 
 ?><!DOCTYPE html>

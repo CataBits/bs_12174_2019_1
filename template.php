@@ -4,7 +4,10 @@
 $titulo = "Teste de título";
 
 // CSS "desta" página
-$css = "";
+$css = "/css/template.css";
+
+// JavaScript "desta" página
+$js = "/js/template.js";
 
 // Carrega o cabeçalho da página
 require ('_header.php');
