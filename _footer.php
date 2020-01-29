@@ -7,7 +7,7 @@
 <footer class="footer">
     <a href="/" title="Página inicial"><i class="fas fa-fw fa-home"></i></a>
     <div>
-        <span title="&copy; Copyright 2020 André Luferat">&copy; 2020 André Luferat</span title="&copy; Copyright 2020 André Luferat">
+        <span title="&copy; Copyright 2020 André Luferat"><i class="far fa-copyright"></i> 2020 André Luferat</span title="&copy; Copyright 2020 André Luferat">
         <div>
             <a href="/contatos.php">Contatos</a>
             &bull;
@@ -20,6 +20,7 @@
 </div>
 
 <script src="/js/jquery.min.js"></script>
+<script src="/js/global.js"></script>
 <?php echo $js ?>    
 </body>
 </html>

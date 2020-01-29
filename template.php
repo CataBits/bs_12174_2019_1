@@ -3,15 +3,18 @@
 // Título "desta" página
 $titulo = "Teste de título";
 
-// CSS "desta" página
-$css = "/css/template.css";
+// CSS "desta" página. Ex.: "/css/template.css"
+$css = "";
 
-// JavaScript "desta" página
-$js = "/js/template.js";
+// JavaScript "desta" página. Ex.: "/js/template.js"
+$js = "";
 
 // Menu ativo "desta" página
-// Valores possíveis: "", "artigos", "contatos", "sobre" e "procurar"
-$menu = "contatos";
+/*
+    Valores possíveis: "", "artigos", "contatos", "sobre" e "procurar".
+    Qualquer outro valor = "".
+*/
+$menu = "";
 
 // Carrega o cabeçalho da página
 require ('_header.php');

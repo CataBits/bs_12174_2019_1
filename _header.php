@@ -14,7 +14,7 @@ if ($css == "") {
     $css = "<link rel=\"stylesheet\" href=\"{$css}\">\n";
 }
 
-// Tratando o JavaScript adicional
+// Tratando o JavaScript adicional, incluído em "_footer.php"
 if ($js == "") {
     $js = null;
 } else {
@@ -55,6 +55,6 @@ if ($js == "") {
 
     <main class="main">
 
-    <!-- O CONTEÚDO DA PÁGINA COMEÇA AQUI -->
+<!-- O CONTEÚDO DA PÁGINA COMEÇA AQUI -->
 
      
