@@ -9,6 +9,10 @@ $css = "/css/template.css";
 // JavaScript "desta" página
 $js = "/js/template.js";
 
+// Menu ativo "desta" página
+// Valores possíveis: "", "artigos", "contatos", "sobre" e "procurar"
+$menu = "contatos";
+
 // Carrega o cabeçalho da página
 require ('_header.php');
 

@@ -75,7 +75,7 @@ body {
     padding: .8rem;
     text-align: center;
 }
-.nav a:hover {
+.nav a:hover, .active {
     background: orangered;
     text-decoration: none;
 }
