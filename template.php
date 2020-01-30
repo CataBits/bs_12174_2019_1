@@ -1,7 +1,7 @@
 <?php
 
-// Título "desta" página
-$titulo = "Teste de título";
+// Título "desta" página. Se vazio ("") usa o título da "index.php"
+$titulo = "";
 
 // CSS "desta" página. Ex.: "/css/template.css"
 $css = "";

@@ -1,0 +1,54 @@
+/* CSS dos contatos */
+.row {
+    display: flex;
+}
+.col1 {
+    flex-grow: 1;
+    padding-right: 1.5rem;
+}
+.col2 {
+    width: 250px;
+    border-left: 3px dotted orangered;
+    padding-left: 1rem;
+}
+.col2 img {
+    width: 100%;
+}
+.col2 ul {
+    list-style: none;
+    font-size: 1.2rem;
+}
+.col2 p {
+    text-align: center;
+}
+
+.col1 form {
+    display: block;
+}
+.col1 label {
+    display: block;
+    margin-bottom: .3rem;
+}
+.col1 input, .col1 textarea, .col1 button {
+    border: 1px solid rgb(189, 189, 189);
+    padding: .3rem .6rem;
+    border-radius: .3rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+.col1 input, .col1 textarea {
+    width: 100%;
+}
+.col1 textarea {
+    height: 6rem;
+}
+.col1 button {
+    background: linear-gradient(rgb(151, 189, 219), rgb(38, 89, 131));
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+.col1 button:hover {
+    background: linear-gradient(rgb(236, 129, 90), rgb(161, 46, 4));
+}

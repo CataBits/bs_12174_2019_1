@@ -1,0 +1,1 @@
+/* JavaScript dos contatos */
