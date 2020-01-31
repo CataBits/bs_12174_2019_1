@@ -23,7 +23,25 @@ $menu = "contatos";
 /* Códigos em PHP desta página entram aqui! */
 /********************************************/
 
+// Preparando variáveis
+$nome = $email = $assunto = $mensagem = $erro = $msgErro = $msgOk = "";
 
+// Se o formulário foi enviado:
+if ( isset($_POST['enviado']) ) :
+
+    // Lendo  e filtrando o "nome"
+    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+
+    // Lendo e filtrando o "e-mail"
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+
+    // Lendo  e filtrando o "assunto"
+    $assunto = filter_input(INPUT_POST, 'assunto', FILTER_SANITIZE_STRING);
+
+    // Lendo  e filtrando a "mensagem"
+    $mensagem = filter_input(INPUT_POST, 'mensagem', FILTER_SANITIZE_STRING);
+
+endif;
 
 /**********************************************/
 /* Códigos em PHP desta página terminam aqui! */
