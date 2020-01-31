@@ -41,6 +41,9 @@ if ( isset($_POST['enviado']) ) :
     // Lendo  e filtrando a "mensagem"
     $mensagem = filter_input(INPUT_POST, 'mensagem', FILTER_SANITIZE_STRING);
 
+    // LEMBRETE! //
+    /* Gravar os dados já sanitizados nos respectivos campos de formulário... */
+
 endif;
 
 /**********************************************/
