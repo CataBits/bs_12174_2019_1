@@ -48,6 +48,7 @@ require ('_header.php');
             <p>
                 <label></label>
                 <button type="submit">Enviar Mensagem</button>
+                <small>&larr; Clique no botão somente uma vez.</small>
             </p>
 
         </form>

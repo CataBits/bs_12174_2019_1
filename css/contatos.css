@@ -13,6 +13,8 @@
 }
 .col2 img {
     width: 100%;
+    display: block;
+    margin: auto;
 }
 .col2 ul {
     list-style: none;
@@ -27,7 +29,7 @@
 }
 .col1 label {
     display: block;
-    margin-bottom: .3rem;
+    margin: 0 0 .3rem .5rem;
 }
 .col1 input, .col1 textarea, .col1 button {
     border: 1px solid rgb(189, 189, 189);
@@ -43,12 +45,37 @@
     height: 6rem;
 }
 .col1 button {
-    background: linear-gradient(rgb(151, 189, 219), rgb(38, 89, 131));
+    background: linear-gradient(rgb(81, 155, 212), rgb(4, 87, 155));
     color: #fff;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: .5rem 1.5rem;
     cursor: pointer;
+    font-weight: bold;
+    margin-left: 2rem;
 }
 .col1 button:hover {
     background: linear-gradient(rgb(236, 129, 90), rgb(161, 46, 4));
+}
+.col1 button + small {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    .col1 {
+        padding: 0;
+    }
+    .col1 button + small {
+        display: none;
+    }
+    .col2 {
+        border: 0;
+        border-top: 3px dotted orangered;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .col2 img {
+        max-width: 400px;
+    }
 }
