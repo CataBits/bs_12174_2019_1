@@ -1,27 +1,27 @@
 <?php
 
-// Configuração inicial da página
+// Configuração inicial da página.
 require('_config.php');
 
-// Título "desta" página. Se vazio ("") usa o título da "index.php"
+// Título "desta" página. Se vazio ("") usa o título da "index.php".
 $titulo = "";
 
-// CSS "desta" página. Ex.: "/css/template.css"
+// CSS "desta" página. Ex.: "/css/template.css".
 $css = "";
 
-// JavaScript "desta" página. Ex.: "/js/template.js"
+// JavaScript "desta" página. Ex.: "/js/template.js".
 $js = "";
 
-// Menu ativo "desta" página
+// Menu ativo "desta" página.
 /*
     Valores possíveis: "", "artigos", "contatos", "sobre" e "procurar".
     Qualquer outro valor = "".
 */
 $menu = "";
 
-/********************************************/
-/* Códigos em PHP desta página entram aqui! */
-/********************************************/
+/*********************************************/
+/* Códigos em PHP desta página começam aqui! */
+/*********************************************/
 
 
 
@@ -29,7 +29,7 @@ $menu = "";
 /* Códigos em PHP desta página terminam aqui! */
 /**********************************************/
 
-// Carrega o cabeçalho da página
+// Carrega o cabeçalho da página.
 require ('_header.php');
 
 ?>
@@ -45,7 +45,7 @@ require ('_header.php');
 
 <?php
 
-// Carrega o rodapé da página
+// Carrega o rodapé da página.
 require ('_footer.php');
 
 ?>

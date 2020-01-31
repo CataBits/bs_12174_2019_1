@@ -1,22 +1,18 @@
 <?php
 
-// Configuração inicial da página
+// Configuração inicial da página.
 require ('_config.php');
 
-// Título "desta" página. Se vazio ("") usa o título da "index.php"
+// Título "desta" página.
 $titulo = "Faça Contato";
 
-// CSS "desta" página. Ex.: "/css/template.css"
+// CSS "desta" página.
 $css = "/css/contatos.css";
 
-// JavaScript "desta" página. Ex.: "/js/template.js"
+// JavaScript "desta" página.
 $js = "/js/contatos.js";
 
-// Menu ativo "desta" página
-/*
-    Valores possíveis: "", "artigos", "contatos", "sobre" e "procurar".
-    Qualquer outro valor = "".
-*/
+// Menu ativo "desta" página.
 $menu = "contatos";
 
 /********************************************/
@@ -27,7 +23,7 @@ $menu = "contatos";
 $nome = $email = $assunto = $mensagem = $erro = $msgErro = $msgOk = "";
 
 // Se o formulário foi enviado:
-if ( isset($_POST['enviado']) ) :
+if ( isset($_POST['enviado']) ) : // Procure pelo 'endif' abaixo!!!
 
     // Lendo  e filtrando o "nome"
     $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
@@ -44,7 +40,7 @@ if ( isset($_POST['enviado']) ) :
     // LEMBRETE! //
     /* Gravar os dados já sanitizados nos respectivos campos de formulário... */
 
-endif;
+endif; // Fecha o 'if' aberto lá em cima!
 
 /**********************************************/
 /* Códigos em PHP desta página terminam aqui! */
@@ -62,6 +58,8 @@ require ('_header.php');
         <p>Preencha o formulário para entrar em contato com a equipe do site.</p>
 
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" name="contatos" id="contatos" method="post" accept-charset="utf-8">
+
+            <?php // Campo oculto usado para saber quando o form foi enviado ?>
             <input type="hidden" name="enviado" value="ok">
     
             <p>
