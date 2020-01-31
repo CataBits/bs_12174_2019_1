@@ -157,7 +157,7 @@ body {
     .nav a {
         display: inline-block;
     }
-    .nav > a:last-child {
+    .nav > a:last-child, .nav > div span {
         display: none;
     }
 }
