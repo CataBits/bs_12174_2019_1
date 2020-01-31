@@ -19,6 +19,16 @@ $js = "/js/contatos.js";
 */
 $menu = "contatos";
 
+/********************************************/
+/* Códigos em PHP desta página entram aqui! */
+/********************************************/
+
+
+
+/**********************************************/
+/* Códigos em PHP desta página terminam aqui! */
+/**********************************************/
+
 // Carrega o cabeçalho da página
 require ('_header.php');
 
