@@ -30,7 +30,7 @@ require ('_header.php');
         <h2>Faça Contato Conosco</h2>
         <p>Preencha o formulário para entrar em contato com a equipe do site.</p>
 
-        <form action="/processa.php" name="contatos" id="contatos" method="post">
+        <form action="/processa.php" name="contatos" id="contatos" method="post" accept-charset="utf-8">
     
             <p>
                 <label for="nome">Nome:</label>
