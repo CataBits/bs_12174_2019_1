@@ -1,5 +1,8 @@
 <?php
 
+// Configuração inicial da página
+require ('_config.php');
+
 // Título "desta" página. Se vazio ("") usa o título da "index.php"
 $titulo = "Faça Contato";
 
