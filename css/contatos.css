@@ -79,3 +79,14 @@
         max-width: 400px;
     }
 }
+
+/* Mensagens de erro */
+.msgErro {
+    display: table;
+    margin: auto;
+    background: #ffc;
+    border: 1px dotted red;
+    padding: 0 1rem;
+    border-radius: .3rem;
+    color: darkred;
+}
