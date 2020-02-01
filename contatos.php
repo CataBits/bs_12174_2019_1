@@ -40,6 +40,46 @@ if ( isset($_POST['enviado']) ) : // Procure pelo 'endif' abaixo!!!
     // LEMBRETE! //
     /* Gravar os dados já sanitizados nos respectivos campos de formulário... */
 
+    // Validando 'nome'.
+    if ( strlen($nome) < 2 ) {
+        $erro .= '<li>Seu nome está muito curto.</li>';
+    }
+
+    // Validando e-mail. Note o uso de "!" para inverter a lógica.
+    if ( !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+        $erro .= '<li>Seu e-mail parece estar incorreto.</li>';
+    }
+
+    // Validando 'assunto'.
+    if ( strlen($assunto) < 4 ) {
+        $erro .= '<li>O assunto está muito curto.</li>';
+    }
+
+    // Validando 'mesagem'.
+    if ( strlen($mensagem) < 4 ) {
+        $erro .= '<li>A mensagem está muito curta.</li>';
+    }
+
+    // Processar erros
+    if ( $erro != '' ) :
+
+        // Formatando uma mensagem de erro usando 'HEREDOC'
+        $msgErro = <<<MENSAGEM
+
+<div class="msgErro">
+        <h3>Oooops!!!</h3>
+        <p>Ocorrem erros que impedem o envio do seu contato:</p>
+        <ul>{$erro}</ul>
+</div>
+
+MENSAGEM;
+
+    else :
+
+        exit ('gravando no DB....');
+
+    endif;
+
 endif; // Fecha o 'if' aberto lá em cima!
 
 /**********************************************/
