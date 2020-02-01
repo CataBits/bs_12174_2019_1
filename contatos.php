@@ -87,6 +87,24 @@ VALUES
 
 SQL;
 
+        // Gravar no DB
+        $conn->query($sql);
+
+        // Obtendo só o primeiro nome do remetente
+        $partes = explode (' ', $nome);
+
+        // Gerando feedback
+        $msgOk = <<<MENSAGEM
+
+<div class="msgOk">
+    <h3>Olá {$partes[0]}!</h3>
+    <p>Seu contato foi enviado com sucesso!</p>
+    <p><em>Obrigado...</em></p>
+    <p><a href="/"><i class="fas fa-fw fa-home"></i> Página Inicial</a></p>
+</div>
+
+MENSAGEM;
+
     endif;
 
 endif; // Fecha o 'if' aberto lá em cima!
@@ -104,6 +122,8 @@ require ('_header.php');
     <div class="col1">
 
         <h2>Faça Contato Conosco</h2>
+
+        <?php if ( $msgOk == '' ): ?>
 
         <p>Preencha o formulário para entrar em contato com a equipe do site.</p>
 
@@ -137,6 +157,16 @@ require ('_header.php');
             </p>
 
         </form>
+
+        <?php
+    
+        else:
+        
+            echo $msgOk;
+
+        endif;
+
+        ?>
 
     </div>
     <div class="col2">
