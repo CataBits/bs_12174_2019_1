@@ -136,19 +136,19 @@ require ('_header.php');
     
             <p>
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" placeholder="Seu nome completo..." value="Joca da Silva">
+                <input type="text" name="nome" id="nome" placeholder="Seu nome completo..." value="<?php echo $nome ?>">
             </p>
             <p>
                 <label for="email">E-mail:</label>
-                <input type="text" name="email" id="email" placeholder="usuario@provedor.com" value="joca@silva.com">
+                <input type="text" name="email" id="email" placeholder="usuario@provedor.com" value="<?php echo $email ?>">
             </p>
             <p>
                 <label for="assunto">Assunto:</label>
-                <input type="text" name="assunto" id="assunto" placeholder="Assunto do seu contato." value="Assuntos do Joca">
+                <input type="text" name="assunto" id="assunto" placeholder="Assunto do seu contato." value="<?php echo $assunto ?>">
             </p>
             <p>
                 <label for="mensagem">Mensagem:</label>
-                <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem.">Mensagem do Joca. Blá blá blá.</textarea>
+                <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem."><?php echo $mensagem ?></textarea>
             </p>
             <p>
                 <label></label>
