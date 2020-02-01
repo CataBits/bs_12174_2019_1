@@ -76,7 +76,16 @@ MENSAGEM;
 
     else :
 
-        exit ('gravando no DB....');
+        // Preparando para gravar no DB
+        $sql = <<<SQL
+
+INSERT INTO contatos 
+    (nome, email, assunto, mensagem)
+VALUES
+    ('{$nome}', '{$email}', '{$assunto}', '{$mensagem}')
+;
+
+SQL;
 
     endif;
 
