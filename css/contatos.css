@@ -90,3 +90,12 @@
     border-radius: .3rem;
     color: darkred;
 }
+
+/* Mensagem de ok */
+.msgOk {
+    display: table;
+    margin: auto;
+}
+.msgOk p:last-child {
+    text-align: center;
+}
