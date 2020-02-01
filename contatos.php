@@ -95,7 +95,10 @@ require ('_header.php');
     <div class="col1">
 
         <h2>Faça Contato Conosco</h2>
+
         <p>Preencha o formulário para entrar em contato com a equipe do site.</p>
+
+        <?php echo $msgErro ?>
 
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" name="contatos" id="contatos" method="post" accept-charset="utf-8">
 
