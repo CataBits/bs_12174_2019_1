@@ -7,7 +7,7 @@ header("Content-type: text/html; charset=utf-8");
 if ( $_SERVER['SERVER_NAME'] != 'localhost' ) { // Se não estamos no XAMPP:
     $conn = new mysqli('', '', '', '');         // Dados obtidos do provedor
 } else {                                        // Se estamos na Internet:
-    $conn = new mysqli('localhost', 'root', '', 'gatosderua'); // Obtidos do XAMPP
+    $conn = new mysqli('localhost', 'root', 'usbw', 'gatosderua'); // Obtidos do XAMPP
 }
 
 // Mostra erros de conexão

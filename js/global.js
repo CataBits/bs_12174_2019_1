@@ -45,9 +45,12 @@ function menuShow(vel) {
 function menuChange() {
 
     if (window.innerWidth > 574) {              // Se a viewport for maior que 640px:
-        menuShow(0);                            // Mostra o menu responsivo
+        $('#menulinks').css('display','flex');  // Altera o "display" do elemento para "flex"
+        menuShow(0);                            // Mostra o menu responsivo        
     } else {                                    // Senão:
+        $('#menulinks').css('display','none');  // Altera o "display" do elemento para "none"
         menuHide(0);                            // Oculta o menu responsivo
+        
     }
 
 }

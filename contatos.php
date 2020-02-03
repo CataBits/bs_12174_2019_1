@@ -70,6 +70,7 @@ if ( isset($_POST['enviado']) ) : // Procure pelo 'endif' abaixo!!!
         <h3>Oooops!!!</h3>
         <p>Ocorrem erros que impedem o envio do seu contato:</p>
         <ul>{$erro}</ul>
+        <p>Por favor, corrija os erros e tente novamente...
 </div>
 
 MENSAGEM;
@@ -98,7 +99,8 @@ SQL;
 
 <div class="msgOk">
     <h3>Olá {$partes[0]}!</h3>
-    <p>Seu contato foi enviado com sucesso!</p>
+    <blockquote>Seu contato foi enviado para a equipe do GatosDeRua.</blockquote>
+    <blockquote>Se necessário, em breve, responderemos.</blockquote>
     <p><em>Obrigado...</em></p>
     <p><a href="/"><i class="fas fa-fw fa-home"></i> Página Inicial</a></p>
 </div>
