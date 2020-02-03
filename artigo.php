@@ -23,7 +23,11 @@ $menu = "artigos";
 /* Códigos em PHP desta página começam aqui! */
 /*********************************************/
 
+$id = ( isset($_GET['id']) ) ? intval($_GET['id']) : 0;
 
+if ( $id == 0 ) header ('Location: artigos.php');
+
+//exit();
 
 /**********************************************/
 /* Códigos em PHP desta página terminam aqui! */
