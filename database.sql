@@ -116,3 +116,10 @@ VALUES
 ;
 
 -- Dados da tabela art_cat
+INSERT INTO art_cat (artigo_id, categoria_id)
+VALUES 
+    (1, 1), (1, 2), (1, 5),
+    (2, 1), (2, 3), (2, 4),
+    (3, 2), (3, 4), (3, 5),
+    (4, 3), (4, 4), (4, 5)
+;    
