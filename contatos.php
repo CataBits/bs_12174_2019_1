@@ -25,22 +25,19 @@ $nome = $email = $assunto = $mensagem = $erro = $msgErro = $msgOk = "";
 // Se o formulário foi enviado:
 if ( isset($_POST['enviado']) ) : // Procure pelo 'endif' abaixo!!!
 
-    // Lendo  e filtrando o "nome"
-    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+    // Lendo e filtrando o "nome"
+    $nome = sanitiza(filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING));
 
     // Lendo e filtrando o "e-mail"
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $email = sanitiza(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
 
     // Lendo  e filtrando o "assunto"
-    $assunto = filter_input(INPUT_POST, 'assunto', FILTER_SANITIZE_STRING);
+    $assunto = sanitiza(filter_input(INPUT_POST, 'assunto', FILTER_SANITIZE_STRING));
 
     // Lendo  e filtrando a "mensagem"
     $mensagem = filter_input(INPUT_POST, 'mensagem', FILTER_SANITIZE_STRING);
 
-    // LEMBRETE! //
-    /* Gravar os dados já sanitizados nos respectivos campos de formulário... */
-
-    // Validando 'nome'.
+    // Validando 'nome' com pelo menos 2 caracteres.
     if ( strlen($nome) < 2 ) {
         $erro .= '<li>Seu nome está muito curto.</li>';
     }
