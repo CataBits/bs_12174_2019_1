@@ -1,1 +1,18 @@
 /* CSS da seção "artigos" */
+
+.artigo {
+    margin-bottom: 1.5rem;
+    overflow: auto;
+    border-radius: .3rem;
+}
+.artigo:nth-child(even) {
+    background: #eee;
+}
+.artigo:nth-child(odd) {
+    background: #ccc;
+}
+.artigo img {
+    float: left;
+    margin-right: 1rem;
+    max-height: 80px;
+}

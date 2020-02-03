@@ -52,7 +52,14 @@ while ( $data = $res->fetch_assoc() ) :
         <img src="{$data['thumbnail']}" alt="{$data['titulo']}">
         <h3>{$data['titulo']}</h3>
     </a>
-        <span>{$data['resumo']}</span>
+        <span>
+            {$data['resumo']}
+            <small>
+            <a href="/artigo.php?id={$data['id_artigo']}">
+                Ler mais...
+            </a>
+            </small>
+        </span>
 </div>    
 
 TEXTO;
