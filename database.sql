@@ -34,7 +34,7 @@ CREATE TABLE autor (
 
 CREATE TABLE categoria (
     id_categoria INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    nome VARCHAR(255)
+    nomecat VARCHAR(255)
 );
 
 CREATE TABLE artigo (
@@ -66,17 +66,53 @@ INSERT INTO autor
 VALUES 
     (
         'https://picsum.photos/200', 'Joca da Silva', 'Joca',
-        'Autor da série de livros, como programar PHP no cinema.'
+        'Autor da série de livros, como programar PHP no cinema.',
         '1989-03-22', 'joca@silva.com', 'http://wwww.joca.com'    
     ),
     (
         'https://picsum.photos/200', 'Dilermano dos Santos', 'Dilermano',
-        'Autor da série de livros, como programar PHP no cinema.'
+        'Autor da série de livros, como programar PHP no cinema.',
         '1989-03-22', 'joca@silva.com', 'http://wwww.joca.com'    
     ),
     (
         'https://picsum.photos/200', 'Marineuza Soares', 'Marineuza',
-        'Autor da série de livros, como programar PHP no cinema.'
+        'Autor da série de livros, como programar PHP no cinema.',
         '1989-03-22', 'joca@silva.com', 'http://wwww.joca.com'    
     )
 ;
+
+-- Dados da tabela categoria
+INSERT INTO categoria (nomecat) VALUES ('Siameses'), ('Persa'), ('Vira-latas'),
+('Peludos'), ('Sem pêlos');
+
+-- Dados da tabela artigo
+INSERT INTO artigo
+    (thumbnail, titulo, resumo, texto, autor_id)
+VALUES
+    (
+        'https://picsum.photos/300/150', 'Artigo Primeiro',
+        'Como pentear pelos de gatos pelados.',
+        '<h3>Lorem Ipsum</h3><p>Vestibulum vel mi interdum, fermentum risus vel, tempor justo. Donec nec rutrum mauris. Morbi auctor ex vitae aliquet iaculis.</p>',
+        1
+    ),
+    (
+        'https://picsum.photos/301/150', 'Artigo Secundário',
+        'Como pentear pelos de gatos pelados.',
+        '<h3>Lorem Ipsum</h3><p>Vestibulum vel mi interdum, fermentum risus vel, tempor justo. Donec nec rutrum mauris. Morbi auctor ex vitae aliquet iaculis.</p>',
+        2
+    ),
+    (
+        'https://picsum.photos/302/150', 'Artigo de Terno',
+        'Como pentear pelos de gatos pelados.',
+        '<h3>Lorem Ipsum</h3><p>Vestibulum vel mi interdum, fermentum risus vel, tempor justo. Donec nec rutrum mauris. Morbi auctor ex vitae aliquet iaculis.</p>',
+        1
+    ),
+    (
+        'https://picsum.photos/303/150', 'Artigo Quadruplicado',
+        'Como pentear pelos de gatos pelados.',
+        '<h3>Lorem Ipsum</h3><p>Vestibulum vel mi interdum, fermentum risus vel, tempor justo. Donec nec rutrum mauris. Morbi auctor ex vitae aliquet iaculis.</p>',
+        3
+    )
+;
+
+-- Dados da tabela art_cat
