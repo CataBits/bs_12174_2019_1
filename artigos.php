@@ -3,20 +3,16 @@
 // Configuração inicial da página.
 require('_config.php');
 
-// Título "desta" página. Se vazio ("") usa o título da "index.php".
+// Título "desta" página.
 $titulo = "Artigos";
 
-// CSS "desta" página. Ex.: "/css/template.css".
+// CSS "desta" página.
 $css = "/css/artigos.css";
 
-// JavaScript "desta" página. Ex.: "/js/template.js".
+// JavaScript "desta" página.
 $js = "";
 
 // Menu ativo "desta" página.
-/*
-    Valores possíveis: "", "artigos", "contatos", "sobre" e "procurar".
-    Qualquer outro valor = "".
-*/
 $menu = "artigos";
 
 /*********************************************/
@@ -78,7 +74,7 @@ require ('_header.php');
 ?>
 
 <h2>Artigos</h2>
-<p>Mais recentes primeiro</p>
+<p>Mais recentes primeiro.</p>
 <?php echo $lista_artigos ?> 
 
 <?php
