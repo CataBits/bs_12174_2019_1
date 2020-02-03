@@ -24,6 +24,8 @@ CREATE TABLE autor (
     nometela VARCHAR(127),
     descricao TEXT,
     nascimento DATE,
+    email VARCHAR(255),
+    site VARCHAR(255),
     campo1 TEXT,
     campo2 TEXT,
     campo3 TEXT,
@@ -42,7 +44,7 @@ CREATE TABLE artigo (
     titulo VARCHAR(255),
     resumo VARCHAR(255),
     texto LONGTEXT,
-    autor_id INT
+    autor_id INT,
     campo1 TEXT,
     campo2 TEXT,
     campo3 TEXT,
@@ -57,3 +59,24 @@ CREATE TABLE art_cat (
     FOREIGN KEY (artigo_id) REFERENCES artigo (id_artigo),
     FOREIGN KEY (categoria_id) REFERENCES categoria (id_categoria)
 );
+
+-- Dados da tabela autor
+INSERT INTO autor
+    (thumbnail, nome, nometela, descricao, nascimento, email, site)
+VALUES 
+    (
+        'https://picsum.photos/200', 'Joca da Silva', 'Joca',
+        'Autor da série de livros, como programar PHP no cinema.'
+        '1989-03-22', 'joca@silva.com', 'http://wwww.joca.com'    
+    ),
+    (
+        'https://picsum.photos/200', 'Dilermano dos Santos', 'Dilermano',
+        'Autor da série de livros, como programar PHP no cinema.'
+        '1989-03-22', 'joca@silva.com', 'http://wwww.joca.com'    
+    ),
+    (
+        'https://picsum.photos/200', 'Marineuza Soares', 'Marineuza',
+        'Autor da série de livros, como programar PHP no cinema.'
+        '1989-03-22', 'joca@silva.com', 'http://wwww.joca.com'    
+    )
+;
