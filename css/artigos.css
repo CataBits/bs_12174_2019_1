@@ -9,7 +9,7 @@
     background: #eee;
 }
 .artigo:nth-child(odd) {
-    background: #ccc;
+    background: #fff;
 }
 .artigo img {
     float: left;
