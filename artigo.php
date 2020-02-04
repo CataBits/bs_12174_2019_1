@@ -68,6 +68,30 @@ $subtitulo = <<<HTML
 
 HTML;
 
+// Lista de categorias
+$sql = <<<SQL
+
+    SELECT *
+    FROM art_cat 
+    INNER JOIN categoria ON categoria_id = id_categoria
+    WHERE artigo_id = '{$id}';
+
+SQL;
+
+// Executa a query
+$res = $conn->query($sql);
+
+// Variável com a listagem
+$cats = '';
+
+while ( $cat = $res->fetch_assoc() ) :
+
+    $cats .= "{$cat['nomecat']}, ";
+
+endwhile;
+
+$cats = substr($cats, 0, -2) . ".";
+
 /**********************************************/
 /* Códigos em PHP desta página terminam aqui! */
 /**********************************************/
@@ -80,6 +104,8 @@ require ('_header.php');
 <h2><?php echo $data['titulo'] ?></h2>
 <p><?php echo $subtitulo ?></p>
 <div><?php echo $artigo ?></div>
+<div class="categorias">Categporias: <?php echo $cats ?></div>
+<p class="retorna"><a href="/artigos.php">&larr; Voltar para a lista de artigos</a></p>
 
 <?php
 

@@ -44,3 +44,13 @@ h2 + p {
     }
 
 }
+
+.categorias {
+    background: orangered;
+    padding: .5rem 1rem;
+    color: #fff;
+}
+
+.retorna {
+    text-align: center;
+}
