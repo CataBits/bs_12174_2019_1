@@ -29,8 +29,8 @@ if ( $id == 0 ) header ('Location: artigos.php');
 $sql = <<<SQL
 
 SELECT 
-    id_artigo, data, titulo, texto, autor_id,
-    DATE_FORMAT(data, '%d/%m/%Y') AS databr,
+    id_artigo, artigo.data, titulo, texto, autor_id,
+    DATE_FORMAT(artigo.data, '%d/%m/%Y') AS databr,
     autor.*
 FROM artigo
 INNER JOIN autor ON autor_id = id_autor
