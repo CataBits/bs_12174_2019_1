@@ -104,7 +104,7 @@ require ('_header.php');
 <h2><?php echo $data['titulo'] ?></h2>
 <p><?php echo $subtitulo ?></p>
 <div><?php echo $artigo ?></div>
-<div class="categorias">Categporias: <?php echo $cats ?></div>
+<div class="categorias">Categorias: <?php echo $cats ?></div>
 <p class="retorna"><a href="/artigos.php">&larr; Voltar para a lista de artigos</a></p>
 
 <?php
